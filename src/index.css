@@ -13,6 +13,15 @@ body {
   justify-content: center;
 }
 
+.btn {
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
 /* LANDING */
 
 .landing {
@@ -25,16 +34,12 @@ body {
 
 .landing h1 {
   font-size: 2.5rem;
+  font-weight: 700;
 }
 
-.landing button {
-  background-color: #4D5B9E;
-  color: #F5F7FB;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
+.start-btn {
   font-size: 1rem;
+  font-weight: 600;
 }
 
 /* QUIZ */
@@ -67,4 +72,10 @@ body {
   border: none;
   border: 1px solid #293264;
   background-color: #F5F7FB;
+}
+
+.check-btn {
+  margin-top: 30px;
+  font-size: .8rem;
+  font-weight: 500;
 }

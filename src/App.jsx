@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Home from './Home'
+import Question from './Question'
 
 function App() {
 
@@ -15,15 +16,32 @@ function App() {
       {
         quizStarted ?
           <main>
-            <section className='question-container'>
-              <p className='question'>How would one say goodbye in Spanish?</p>
-              <div className="options-container">
-                <button className='option'>Adiós</button>
-                <button className='option'>Hola</button>
-                <button className='option'>Au Revoir</button>
-                <button className='option'>Salir</button>
-              </div>
-            </section>
+            <Question
+              question="How would one say goodbye in Spanish?"
+              options={['Adiós', 'Hola', 'Au Revoir', 'Salir']}
+            />
+
+            <Question
+              question="How would one say goodbye in Spanish?"
+              options={['Adiós', 'Hola', 'Au Revoir', 'Salir']}
+            />
+
+            <Question
+              question="How would one say goodbye in Spanish?"
+              options={['Adiós', 'Hola', 'Au Revoir', 'Salir']}
+            />
+
+            <Question
+              question="How would one say goodbye in Spanish?"
+              options={['Adiós', 'Hola', 'Au Revoir', 'Salir']}
+            />
+
+            <Question
+              question="How would one say goodbye in Spanish?"
+              options={['Adiós', 'Hola', 'Au Revoir', 'Salir']}
+            />
+
+            <button className="btn check-btn">Check Answers</button>
           </main> :
             <Home onClick={startQuiz} />
         }

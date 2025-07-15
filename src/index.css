@@ -74,6 +74,11 @@ body {
   background-color: #F5F7FB;
 }
 
+.option.selected {
+  background-color: #D6DBF5;
+  border: none;
+}
+
 .check-btn {
   margin-top: 30px;
   font-size: .8rem;

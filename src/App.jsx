@@ -30,12 +30,14 @@ function App() {
             {quizData && quizData.map( (item, index) => {
               const question = item.question
               let options = [...item.incorrect_answers, item.correct_answer]
+              const answer = item.correct_answer
               options = options.sort(() => Math.random() - 0.5)
               return (
                 <Question
                   key={index}
                   question={decode(question)}
                   options={options}
+                  answer={answer}
                 />
               )
             })}

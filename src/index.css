@@ -79,6 +79,16 @@ body {
   border: none;
 }
 
+.option.correct {
+  background-color: #94D7A2;
+  border: none;
+}
+
+.option.incorrect {
+  background-color: #F8BCBC;
+  border: none;
+}
+
 .check-btn {
   margin-top: 30px;
   font-size: .8rem;

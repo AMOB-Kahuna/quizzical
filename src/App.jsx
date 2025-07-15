@@ -8,8 +8,7 @@ function App() {
 
   const [quizStarted, setQuizStarted] = useState(false)
   const [quizData, setQuizData] = useState()
-  
-
+  const [checkAnswers, setCheckAnswers] = useState(false)
 
   function startQuiz() {
     setQuizStarted(true)
@@ -38,11 +37,19 @@ function App() {
                   question={decode(question)}
                   options={options}
                   answer={answer}
+                  checkAnswers={checkAnswers}
                 />
               )
             })}
 
-            <button className="btn check-btn">Check Answers</button>
+            {
+              !checkAnswers ? 
+              <button className="btn check-btn" onClick={() => setCheckAnswers(true)}>Check Answers</button> :
+              <div>
+                <p>Your score</p>
+                <button className='btn start-btn' onClick={startQuiz}>Play again</button>
+              </div>
+            }
 
           </main> :
             <Home onClick={startQuiz} />

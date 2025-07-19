@@ -9,6 +9,7 @@ function App() {
   const [quizStarted, setQuizStarted] = useState(false)
   const [quizData, setQuizData] = useState()
   const [checkAnswers, setCheckAnswers] = useState(false)
+  const [score, setScore] = useState(0)
 
   function startQuiz() {
     setQuizStarted(true)
@@ -19,6 +20,10 @@ function App() {
         setQuizData(data.results)
       })
       .catch(err => console.error('Error fetching quiz data:', err))
+  }
+
+  function onCorrect() {
+    setScore(prevScore => prevScore + 1)
   }
 
   return (
@@ -38,16 +43,22 @@ function App() {
                   options={options}
                   answer={answer}
                   checkAnswers={checkAnswers}
+                  onCorrect={onCorrect}
                 />
               )
             })}
 
             {
-              !checkAnswers ? 
+              !quizData ? <h2>Fetching questions...</h2> : !checkAnswers ? 
               <button className="btn check-btn" onClick={() => setCheckAnswers(true)}>Check Answers</button> :
-              <div>
-                <p>Your score</p>
-                <button className='btn start-btn' onClick={startQuiz}>Play again</button>
+              <div className="result-section">
+                <p>You got {score} out of {quizData.length} questions</p>
+                <button className='btn start-btn' onClick={ () => {
+                  setQuizData(null)
+                  setScore(0)
+                  setCheckAnswers(false)
+                  startQuiz()
+                }}>Play again</button>
               </div>
             }
 

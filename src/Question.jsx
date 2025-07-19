@@ -18,20 +18,14 @@ export default function Question(props) {
                 return {...button, selected: false}
             })
         )
-        
-        if (answer === props.answer) {
-            console.log("correct")
-        } else {
-            console.log("wrong")
-        }
     }
 
     function checkAnswer() {
-        console.log("running")
 
         if (props.checkAnswers) {
             setButtons(prevButtons => prevButtons.map(button => {
                 if (button.selected && button.option === props.answer) {
+                    props.onCorrect()
                     return {...button, correct: true, disabled: true}
                 } else if (button.selected && button.option != props.answer) {
                     return {...button, incorrect: true, disabled: true}

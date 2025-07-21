@@ -1,8 +1,10 @@
-export default function Home(props) {
+import { Link } from "react-router-dom"
+
+export default function Home() {
     return (
         <div className='landing'>
             <h1>Quizzical</h1>
-            <button className="btn start-btn" onClick={props.onClick}>Start Quiz</button>
+            <Link to="/quiz" className="btn start-btn">Start Quiz</Link>
       </div>
     )
 }

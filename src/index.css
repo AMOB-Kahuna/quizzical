@@ -42,6 +42,28 @@ body {
   font-weight: 600;
 }
 
+form {
+  border: 1px solid #293264;
+  padding: 20px 10px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+form input,
+form select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0 30px;
+  height: 2.5em;
+  padding: .5em;
+}
+
+form .btn {
+  display: block;
+  margin: 0 auto;
+}
+
 /* QUIZ */
 
 .question-container {

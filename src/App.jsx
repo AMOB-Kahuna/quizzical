@@ -29,7 +29,7 @@ function App() {
 
   function handleFormSubmit(e) {
     e.preventDefault()
-    setFormSubmitButtonText("Fetching Questions...")
+    setFormSubmitButtonText("Fetching...")
 
     const formData = new FormData(e.target)
     const amount = formData.get("amount")

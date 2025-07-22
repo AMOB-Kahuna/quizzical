@@ -1,8 +1,10 @@
 import {useState, useEffect} from 'react'
+import {decode} from 'html-entities'
+
 
 export default function Question(props) {
     const [buttons, setButtons] = useState(props.options.map(option => ({
-        option,
+        option: decode(option),
         correct: false,
         incorrect: false,
         selected: false,

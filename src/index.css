@@ -66,6 +66,40 @@ form .btn {
 
 /* QUIZ */
 
+.quiz-header {
+  text-align: left;
+  padding: 10px;
+  background-color: #4D5B9E;
+  margin-bottom: 15px;
+}
+
+.quiz-header h2,
+.quiz-header h2 span {
+  color: #D6DBF5;
+}
+
+.quiz-header h2 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.quiz-header h2 span {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.quiz-header h2 span.easy {
+  color: #94D7A2;
+}
+
+.quiz-header h2 span.medium {
+  color: #e7b64c;
+}
+
+.quiz-header h2 span.hard {
+  color: #ec8282;
+}
+
 .question-container {
   width: 300px;
   padding: 15px 0;
@@ -127,6 +161,14 @@ form .btn {
 
 @media(min-width: 600px) {
 
+  .quiz-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .quiz-header h2 span {
+    font-size: 1.4rem;
+  }
+
   .question-container {
     width: 100%;
     gap: 20px;
@@ -157,6 +199,14 @@ form .btn {
 }
 
 @media(min-width: 1028px) {
+
+  .quiz-header h2 {
+    font-size: 2rem;
+  }
+
+  .quiz-header h2 span {
+    font-size: 1.8rem;
+  }
 
   .question-container {
     padding: 40px 0;
